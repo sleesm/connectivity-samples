@@ -347,7 +347,7 @@ public class BluetoothChatFragment extends Fragment {
                     connectDevice(data, false);
                 }
                 break;
-            case REQUEST_ENABLE_BT:
+            case REQUEST_ENABLE_BT: // 블루투스 장치를 켜기 위한 요청코드
                 // When the request to enable Bluetooth returns
                 if (resultCode == Activity.RESULT_OK) {
                     // Bluetooth is now enabled, so set up a chat session
