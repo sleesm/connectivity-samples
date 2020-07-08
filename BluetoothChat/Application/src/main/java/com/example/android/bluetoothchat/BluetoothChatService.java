@@ -138,6 +138,7 @@ public class BluetoothChatService {
      * @param device The BluetoothDevice to connect
      * @param secure Socket Security type - Secure (true) , Insecure (false)
      */
+    // ConnectThread를 초기화 시키고 시작한다. 그리고 device의 모든 연결을 제거한다.
     public synchronized void connect(BluetoothDevice device, boolean secure) {
         Log.d(TAG, "connect to: " + device);
 
@@ -168,6 +169,7 @@ public class BluetoothChatService {
      * @param socket The BluetoothSocket on which the connection was made
      * @param device The BluetoothDevice that has been connected
      */
+    //ConnectedThread를 초기화
     public synchronized void connected(BluetoothSocket socket, BluetoothDevice
             device, final String socketType) {
         Log.d(TAG, "connected, Socket Type:" + socketType);
@@ -209,7 +211,7 @@ public class BluetoothChatService {
     }
 
     /**
-     * Stop all threads
+     * Stop all threads 모든 스레드를 stop 한다.
      */
     public synchronized void stop() {
         Log.d(TAG, "stop");
