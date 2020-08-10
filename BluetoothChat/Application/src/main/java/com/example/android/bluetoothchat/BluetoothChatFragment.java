@@ -381,7 +381,7 @@ public class BluetoothChatFragment extends Fragment {
         // Get the BluetoothDevice object
         BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(address);
         // Attempt to connect to the device
-        mChatService.connect(device, secure);
+        mChatService.connect(device, 0); // SeletedPosition을 뭘로 하지
     }
 
     @Override
